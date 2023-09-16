@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Subscribe Message" >
+        <div>
+    <lightning-button class="slds-m-left_small slds-m-right_small" variant="brand" label="Subscribe" title="Subscribe" onclick={subscribeToMessageChannel}></lightning-button>
+     <lightning-button variant="brand" label="Unsubscribe" title="Unsubscribe" onclick={unsubscribeToMessageChannel}></lightning-button>
+     </div>
+     <div class ="slds-m-left_small slds-m-top_small">{message}</div>
+       </lightning-card>
+
+</template>

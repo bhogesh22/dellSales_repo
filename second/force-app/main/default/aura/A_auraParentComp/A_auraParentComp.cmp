@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <c:A_auraChildComp aura:id="childComponent"/>
+    <lightning:button label="call Aura Method" variant="brand" onclick="{!c.callAuraMethod}" />
+    <aura:attribute name="parentAttribute" type="string" default="PARENT COMPENENT Loading new ....."/>
+    <div style="    color:black;
+    background-color:green;
+    padding:100px;
+   
+   margin-top:10px;">
+    {!v.parentAttribute}
+    </div>
+ </aura:component>

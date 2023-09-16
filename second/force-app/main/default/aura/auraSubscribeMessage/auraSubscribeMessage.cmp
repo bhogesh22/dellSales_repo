@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <lightning:messageChannel type="basicMessageChannel__c" onMessage="{!c.handleMessage}" />
+    <aura:attribute name="SubscriberMsg" type="string" default="Loading...."/>
+    <lightning:card title="Subscribe Message">
+        <h2 class="slds-m-left_medium">{!v.subscriberMsg}</h2>
+    </lightning:card>
+</aura:component>

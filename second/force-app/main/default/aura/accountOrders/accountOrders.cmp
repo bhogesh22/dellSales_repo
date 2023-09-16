@@ -1,0 +1,14 @@
+<aura:component controller = "OrderController"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" >
+    <aura:attribute name="OrdersData" type="Object"/>
+    <aura:attribute name="OrderColumns" type="List"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <div style="height : 300px">
+        <lightning:datatable 
+                             keyField="id"
+                             data="{!v.OrdersData}"
+                             columns="{!v.OrderColumns}"
+                             hidecheckboxColumn="true"/>
+    </div>                          
+</aura:component>

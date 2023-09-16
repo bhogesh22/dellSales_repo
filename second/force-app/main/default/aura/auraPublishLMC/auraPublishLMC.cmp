@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <lightning:messageChannel type="basicMessageChannel__c" aura:id="bmc"/>
+    <aura:attribute name="message" type="string" default="SalesforceLightning Message Channel"/>
+    
+    <lightning:card title="Publish Message">
+        <h2 class="slds-m-left_medium">{!v.message}</h2>
+        <lightning:button class="slds-m-left_medium" label="Send Payload" variant="brand" onclick="{! c.handleClick }"/>
+                </lightning:card>
+       </aura:component>

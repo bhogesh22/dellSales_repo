@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:handler name="CmpEvent" event="c:E_ce" action="{!c.getEventParam}"/>
+    <aura:attribute name="ParentText" type="string" default="parent component loading... "/>
+    <c:E_ceChild/>
+    <div>
+        {!v.ParentText} <br/>
+        
+    </div>
+</aura:component>

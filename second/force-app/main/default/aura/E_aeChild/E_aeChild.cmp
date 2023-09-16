@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="data" type="string" default="child component sfdc2023 training"/>
+   
+    <div>
+        {!v.data} <br/>
+        <lightning:button label="pass Data" variant="brand" onclick="{!c.setEventParam}"/>
+    </div>
+       
+</aura:component>

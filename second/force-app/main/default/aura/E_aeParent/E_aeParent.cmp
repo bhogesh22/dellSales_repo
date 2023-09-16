@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:handler  event="c:E_ae" action="{!c.getEventParam}"/>
+    <aura:attribute name="ParentText" type="string" default="parent component loading...2023 "/>
+    
+    <div>
+        {!v.ParentText} <br/>
+        
+    </div>
+</aura:component>
