@@ -1,0 +1,26 @@
+<apex:page >
+    <button onclick="handleSubscribe()">Subscribe</button>
+     <button onclick="handleUnsubscribe()">Unsubscribe</button>
+     <button onclick="clearData()">Clear Data</button>
+    <div class="receivedText"></div>
+  <script>
+    const lmcName = "{!$MessageChannel.basicMessageChannel__c}";
+    let subscription = null;
+    function handleSubscribe(){
+        if (!subscription) {
+            subscription = sforce.one.subscribe(lmcName, handleMessage);
+            }
+}
+function handleUnsubscribe() {
+    sforce.one.unsubscribe(subscription);
+    subscription = null;
+    }
+     function handleMessage(message) {
+         let respJson = JSON.stringify(message);
+         document.querySelector('.receivedText').innerHTML = respJson;
+         }
+    function clearData() {
+    document.querySelector('.receivedText').innerHTML = ' ';  
+        }
+        </script>
+</apex:page>

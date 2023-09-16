@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Account List">
+        <div class="slds-m-around_medium">
+            <div class="slds-grid slds-gutters">
+     
+                <div class="slds-col slds-size_1-of-2">
+                    <template if:true={accountList}>
+                        <lightning-datatable
+                            key-field="Id"
+                            data={filteredAccounts}
+                            columns={columns}
+                            hide-checkbox-column="true">
+                        </lightning-datatable>
+                    </template>
+                    <template if:false={accountList}>
+                        <p>No accounts found.</p>
+                    </template>
+                </div>
+                           <div class="slds-col slds-size_1-of-2">
+                    <!-- Search Input Field -->
+                    <lightning-input
+                        label="Search Accounts"
+                        value={searchTerm}
+                        onchange={handleSearchTermChange}>
+                    </lightning-input>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<apex:page >
+    <div id="lightning"/>
+    <button onclick="handlePublish()">Publish</button>
+    <script>
+    const lmcName = "{!$MessageChannel.basicMessageChannel__c}"
+    function handlePublish() {
+        cont payLoad = {
+        messageOne: 'lightning message service'
+            }
+        sforce.one.publish(lmcName, payLoad);
+        }
+    </script>
+</apex:page>

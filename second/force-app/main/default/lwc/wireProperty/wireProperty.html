@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  title="Related Contacts - Wire Property">
+        <template if:true={contacts.data}>
+            <lightning-datatable class="slds-p-around_small" hide-checkbox-column = "true" data={contacts.data} columns={columns}
+                key-field="Id">
+                
+                 
+                
+            </lightning-datatable>
+        </template>
+         <template if:true={contacts.error}>
+             something went wrong
+         </template>
+
+
+     
+    </lightning-card>
+
+
+</template>

@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+                access="global" 
+                extensible="true">
+    <aura:attribute name="description" type="String" default="Default description" />
+    
+    <p>super.cmp description: {!v.description}</p>
+    
+    {!v.body}
+    
+</aura:component>
